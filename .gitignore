@@ -1,0 +1,28 @@
+### Mac
+.DS_Store
+
+### Eclipse
+.classpath
+.project
+.settings/
+
+### Intellij
+.idea/
+*.iml
+*.iws
+out/
+
+### Build tool (Gradle + Maven)
+.gradle*
+gradle/
+build/
+target/
+pom.xml.*
+.mvn/
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+### Others
+application-*.y*ml
+docker/mt_*.sql

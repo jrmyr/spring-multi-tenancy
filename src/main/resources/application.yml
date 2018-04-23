@@ -1,0 +1,33 @@
+spring:
+  main:
+    banner-mode: "off"
+    spring.main.web-application-type: SERVLET
+  datasource:
+    # Default datasource
+    default:
+      url: jdbc:postgresql://localhost:52001/testdb?socketTimeout=270
+      username: testuser
+      password: password
+    # Different tenant datasources
+    tenant-de:
+      url: jdbc:postgresql://localhost:52010/testdb?socketTimeout=270
+      username: testuser
+      password: password
+    tenant-en:
+      url: jdbc:postgresql://localhost:52011/testdb?socketTimeout=270
+      username: testuser
+      password: password
+  jpa:
+    databasePlatform: org.hibernate.dialect.PostgreSQLDialect
+    #show-sql: true --> Better to define SQL output in log to also get the bind parameters
+    hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+    properties:
+      hibernate:
+        temp:
+          # Speed up JPA Spring Boot startup rapidly
+          use_jdbc_metadata_defaults: false
+
+server:
+  port: 8085
