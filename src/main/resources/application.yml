@@ -3,11 +3,10 @@ spring:
     banner-mode: "off"
     spring.main.web-application-type: SERVLET
   datasource:
-    # Default datasource
-    default:
-      url: jdbc:postgresql://localhost:52001/testdb?socketTimeout=270
-      username: testuser
-      password: password
+    # Default datasource (needed!)
+    url: jdbc:postgresql://localhost:52001/testdb?socketTimeout=270
+    username: testuser
+    password: password
     # Different tenant datasources
     tenant-de:
       url: jdbc:postgresql://localhost:52010/testdb?socketTimeout=270

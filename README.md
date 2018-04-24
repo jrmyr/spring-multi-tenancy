@@ -4,7 +4,8 @@ Multi-tenancy demo
 This is a demonstration how to deal with multiple predefined tenants. In this example all tenants are known and
 type-safely encoded in an enum.
 
-A more dynamic/general approach can be found [here](https://github.com/wmeints/spring-multi-tenant-demo).
+A more dynamic/general approach can be found [here](https://github.com/wmeints/spring-multi-tenant-demo) - where also
+the basic idea for this project was taken from.
 
 The project brings its creation scripts for example databases hosted by a local docker installation so that the system
 can be tested with a few simple commands. As this test is easy to do, no additional unit test have been added, yet.
